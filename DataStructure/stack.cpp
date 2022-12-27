@@ -47,11 +47,11 @@ bool Stack::IsFull()
 {
 	return (position+1) == len;
 }
-void Stack::Print()
+int Stack::Peek(int index)
 {
-	for (int i = 0; i < len; i++)
-	{
-		cout << stack[i] << " ";
-	}
-	cout << endl << endl;
+	if (index >= 0 && index < len)
+		return stack[index];
+	
+	return -1;
 }
+

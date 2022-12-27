@@ -1,14 +1,13 @@
-#pragma once
 #include <iostream>
 
-using namespace std;
 #ifndef STACK_H
 #define STACK_H
 
+#define STACK_MAX_COUNT 10
 class Stack
 {
 	private :
-		int stack[10] = {0};
+		int stack[STACK_MAX_COUNT] = {0};
 		int position;
 		int len;
 
@@ -21,6 +20,6 @@ class Stack
 		bool IsEmpty();
 		bool IsFull();
 		void Clear();
-		void Print();
+		int Peek(int index);
 };
 #endif // !
