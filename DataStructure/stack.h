@@ -1,19 +1,26 @@
 #pragma once
+#include <iostream>
 
-#ifndef STACK.H
-#define STACK.H
+using namespace std;
+#ifndef STACK_H
+#define STACK_H
 
 class Stack
 {
-private :
-	int stack[100] = {0};
-	int position;
+	private :
+		int stack[10] = {0};
+		int position;
+		int len;
 
-public :
-	void Push(int data);
-	int Pop();
-	int GetSize();
-	bool IsEmpty();
-	void Clear();
+	public :
+		Stack();
+		~Stack();
+		bool Push(int data);
+		int Pop();
+		int GetSize();
+		bool IsEmpty();
+		bool IsFull();
+		void Clear();
+		void Print();
 };
-#endif // !1
+#endif // !
